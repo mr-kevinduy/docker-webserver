@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  app:
+    image: docker-webserver_app
+    tty: true
+    restart: always
+    volumes:
+      - .:/var/www/app
+      - ${DOCKER_PATH}/php/php.ini:/usr/local/etc/php/php.ini
+      - ${DOCKER_PATH}/vhosts:/etc/apache2/sites-enabled
+    working_dir: /var/www/app
+    ports:
+      - 80:80
+      - 443:443
+      - 3000:3000
