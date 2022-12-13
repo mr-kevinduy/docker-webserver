@@ -49,6 +49,10 @@ RUN apt-get update && \
     pecl install imagick && \
     docker-php-ext-enable imagick
 
+# Install cron
+RUN apt-get update && \
+    apt-get -y --no-install-recommends install cron
+
 # Other PHP7 Extensions
 
 RUN docker-php-ext-install pdo_mysql && \
@@ -77,7 +81,7 @@ RUN apt-get -y update && \
 RUN a2enmod rewrite headers
 
 # Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g yarn gulp-cli bower
 
