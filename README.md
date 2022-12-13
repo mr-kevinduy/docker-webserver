@@ -2,7 +2,8 @@
 
 Docker image build a webserver
 
-2.0:
+***v2.0:***
+
     - PHP 7.4
     - Apache 2
     - Nodejs 16
@@ -10,7 +11,8 @@ Docker image build a webserver
     - composer version 2.4.4 2022-10-27 14:39:29
     - Other packages: nano, vi, wget, curl, git, zip, xdebug 2.8.0, redis 5.1.1
 
-1.0
+***v1.0:***
+
     - PHP 7.4
     - Apache 2
     - Nodejs 12
